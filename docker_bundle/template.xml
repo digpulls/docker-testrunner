@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- This file contains sample configuration used for tests execution along with tests to execute.
+     You'll need to put your settings instead of placeholders below.
+     Please do not promote your own settings used for local execution to remote branches.
+     Documentation at http://testng.org/doc/documentation-main.html#testng-xml
+ -->
+<suite name="Suite" parallel="classes" thread-count="1">
+    <!-- Parameters to be used for execution. Please note that not all params are listed below - only common-used -->
+
+    <!-- Browser to load driver for -->
+    <parameter name="browser" value="chrome"/>
+
+    <!-- Parameters -->
+    <parameter name="URL" value="http:/{{URL}}"/>
+
+    <!-- This node lists tests to be executed. You can narrow set of tests to by executed by specifying test classes,
+         packages, groups or even specific methods.
+         Find more info at http://testng.org/doc/documentation-main.html#testng-xml
+     -->
+    <test name="Test">
+        <packages>
+            <package name="com.test.*"/>
+        </packages>
+    </test>
+</suite>
